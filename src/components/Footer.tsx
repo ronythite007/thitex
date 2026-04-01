@@ -1,55 +1,41 @@
 import { Link } from "react-router-dom";
-import { Mail, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-b from-background to-muted/20 border-t border-border/50">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,0,0,0.02),transparent_50%)] pointer-events-none" />
-
-      <div className="relative px-6 lg:px-10 max-w-7xl mx-auto">
-        <div className="divider opacity-30" />
-
+    <footer className="bg-slate-50 border-t border-border/20">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
         {/* Newsletter Section */}
-        <div className="pt-16 pb-12">
+        <div className="pt-8 pb-8">
           <div className="max-w-2xl mx-auto">
-            <div className="rounded-3xl border border-border/30 bg-background/70 backdrop-blur-sm p-6 md:p-10 shadow-sm">
-              <div className="text-center">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-mono-tech mb-6">
-                  <Mail className="w-4 h-4" />
-                  Stay Updated
-                </div>
-                <h3 className="text-2xl md:text-3xl font-display font-semibold text-foreground mb-4">
+            <div className="relative overflow-hidden rounded-3xl border border-black/20 bg-white p-5 md:p-6 shadow-sm">
+              <div className="relative text-center">
+                <h3 className="text-xl md:text-2xl font-extrabold tracking-tight text-black mb-1">
                   Get the latest insights
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-8 max-w-lg mx-auto">
-                  Join our newsletter for exclusive insights on technology, AI innovation, and digital transformation strategies.
+                <p className="text-gray-600 leading-relaxed mb-5 max-w-xl mx-auto text-sm">
+                  AI, tech, and transformation updates—one elegant summary each month.
                 </p>
               </div>
-              <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
+              <form className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
                 <div className="flex-1 relative">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="w-full px-4 py-4 rounded-xl border border-border/50 bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 placeholder:text-muted-foreground/60"
-                />
-              </div>
-              <button
-                type="submit"
-                className="group px-6 py-4 bg-primary text-primary-foreground rounded-xl font-mono-tech hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 flex items-center gap-2 whitespace-nowrap"
-              >
-                Subscribe
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
-            </form>
-            <p className="text-xs text-muted-foreground mt-4">
-              We respect your privacy. Unsubscribe at any time.
-            </p>
+                  <input
+                    type="email"
+                    placeholder="Email address"
+                    className="w-full px-4 py-2.5 rounded-xl border border-gray-300 bg-white text-sm text-black shadow-sm outline-none transition-all duration-300 focus:border-black focus:ring-2 focus:ring-black/10"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="group flex items-center justify-center gap-2 rounded-xl bg-black px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-gray-900"
+                >
+                  Subscribe
+                  <ArrowRight className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" />
+                </button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-
-        <div className="divider opacity-30" />
 
         {/* Footer Links */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
@@ -121,8 +107,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        <div className="divider opacity-30" />
 
         {/* Bottom Section */}
         <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-4">

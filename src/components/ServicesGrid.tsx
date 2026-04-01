@@ -16,26 +16,26 @@ const services: Service[] = [
   {
     icon: Code2,
     number: "01",
-    title: "Software Engineering",
-    description: "Scalable architectures, cloud-native systems, and full-stack applications built for performance and longevity.",
+    title: "Website & App Development",
+    description: "Enterprise-grade platforms engineered for scale. Cloud-native architecture, zero-downtime deployments, and systems designed to handle millions of transactions seamlessly.",
   },
   {
     icon: Brain,
     number: "02",
-    title: "AI & Machine Learning",
-    description: "Custom ML pipelines, intelligent automation, and predictive systems that turn complexity into competitive advantage.",
+    title: "AI & Machine Learning Solutions",
+    description: "Production-grade ML systems, predictive analytics, LLM integrations, and intelligent automation that deliver measurable business impact with transparency and continuous optimization.",
   },
   {
     icon: BarChart3,
     number: "03",
-    title: "Growth & Marketing",
-    description: "Data-driven strategies, performance analytics, and conversion optimization that deliver measurable outcomes.",
+    title: "Custom Platform Architecture",
+    description: "Bespoke solutions engineered from first principles. Multi-tenant systems, proprietary SaaS applications, and digital marketplaces built for competitive advantage and long-term growth.",
   },
   {
     icon: Palette,
     number: "04",
-    title: "Product Design",
-    description: "Research-informed interfaces that reduce friction, elevate experience, and align every interaction with intent.",
+    title: "Strategic Design & User Experience",
+    description: "User-centric design systems, intuitive interfaces that serve complex requirements beautifully, and accessibility compliance that reduce friction and accelerate adoption.",
   },
 ];
 
