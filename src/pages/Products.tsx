@@ -228,7 +228,9 @@ const Products = () => {
         )}
       </section>
 
-      <Footer />
+      <div className="w-full bg-[#F8F9FA] dark:bg-black/20">
+        <Footer />
+      </div>
     </div>
   );
 };

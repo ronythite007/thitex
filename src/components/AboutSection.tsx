@@ -29,19 +29,19 @@ const principles = [
 
 const companyStatements = [
   {
-    tag: "Our Philosophy",
-    heading: "\"We don't just write code. We build unfair advantages.\"",
-    indicator: "Digital Excellence"
+    tag: "About THITEX",
+    heading: "\"A growth partner for organizations that demand precision, reliability, and speed.\"",
+    indicator: "Built for modern enterprises"
   },
   {
     tag: "Our Mission",
-    heading: "\"To transform complex problems into elegant, scalable architecture.\"",
-    indicator: "Global Impact"
+    heading: "\"To deliver secure and scalable software systems that power measurable business outcomes.\"",
+    indicator: "Business-impact engineering"
   },
   {
-    tag: "Our Standard",
-    heading: "\"Zero technical debt. Uncompromising quality in every commit.\"",
-    indicator: "Engineering Elite"
+    tag: "Our Promise",
+    heading: "\"Every project is treated as a strategic initiative with a relentless focus on quality.\"",
+    indicator: "Trusted technical leadership"
   }
 ];
 
@@ -56,83 +56,76 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section id="about" className="px-6 lg:px-10 py-24 max-w-5xl mx-auto flex flex-col items-center">
-      
-      {/* 1. Full-Width Dynamic Header (No Rectangles, No Cutting) */}
-      <div className="w-full text-center flex flex-col items-center justify-center min-h-[220px] md:min-h-[200px] mb-12">
+    <section id="about" className="px-6 lg:px-10 py-24 max-w-4xl mx-auto">
+      <div className="text-center">
+        <p className="text-xs uppercase tracking-widest text-primary font-semibold">About THITEX</p>
+        <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold text-foreground">Building resilient software for ambitious organizations</h2>
+      </div>
+
+      <div className="mt-16 space-y-5 text-muted-foreground text-lg leading-relaxed">
+        <p>
+          THITEX is a technology-first design and engineering studio partnering with enterprise and mid-market organizations to build platforms that define markets. We specialize in comprehensive digital solutions: from <span className="text-foreground font-semibold">custom website and application development</span>, to <span className="text-foreground font-semibold">AI and machine learning integration</span>, <span className="text-foreground font-semibold">personalized platform architecture</span>, and <span className="text-foreground font-semibold">strategic visual design</span>.
+        </p>
+        <p>
+          Every engagement starts with deep technical and business discovery. We architect cloud-native systems, implement intelligent automation, and craft interfaces that feel natural while serving complex workflows. Our teams combine backend resilience with predictive intelligence and design excellence—delivering products that work harder, scale further, and delight users.
+        </p>
+        <p>
+          We move with discipline and speed. Rather than inflating timelines or introducing unnecessary complexity, we define success metrics upfront, deliver in measurable increments, and maintain rigorous quality gates throughout the entire lifecycle. The result is software that reduces operational friction, minimizes risk, and compounds competitive advantage.
+        </p>
+      </div>
+
+      {/* Animated Company Statements Carousel */}
+      <div className="mt-16 min-h-[160px] flex items-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
+            exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.6, ease }}
-            className="w-full max-w-4xl"
+            className="w-full p-8 rounded-2xl bg-gradient-to-r from-primary/10 via-primary/5 to-secondary/10 border border-primary/20 backdrop-blur"
           >
-            <div className="inline-flex items-center justify-center gap-3 mb-8">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="font-mono-tech text-xs uppercase tracking-widest text-primary/80 font-semibold">
-                {companyStatements[currentIndex].tag}
-              </span>
-            </div>
-            
-            <h2 className="font-display font-semibold text-3xl md:text-5xl lg:text-6xl text-foreground leading-[1.2] tracking-tight">
-              {companyStatements[currentIndex].heading.split('. ').map((part, i, arr) => (
-                <span key={i} className={i === 1 ? "text-primary italic font-medium ml-2" : ""}>
-                  {part}{i !== arr.length - 1 ? '.' : ''}
-                </span>
-              ))}
-            </h2>
+            <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-2">{companyStatements[currentIndex].tag}</p>
+            <p className="text-2xl md:text-3xl font-bold text-foreground italic mb-4">{companyStatements[currentIndex].heading}</p>
+            <p className="text-sm text-muted-foreground font-medium">{companyStatements[currentIndex].indicator}</p>
           </motion.div>
         </AnimatePresence>
       </div>
 
-      {/* 2. Simple, Direct Company Context */}
-      <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2, ease }}
-          className="w-full text-center space-y-6 max-w-3xl border-t border-border/5 pt-12"
-      >
-        <p className="text-muted-foreground leading-relaxed text-lg md:text-xl">
-          THITEX is a premium software development agency specializing in scalable web applications, high-performance backend systems, and intuitive user experiences. We focus on delivering <span className="text-foreground font-medium">clean code and robust architecture</span> that truly scales.
-        </p>
-        <p className="text-muted-foreground leading-relaxed text-lg md:text-xl">
-          Whether you need to modernize an existing platform or build complex enterprise infrastructure from scratch, our team of dedicated engineers operates efficiently to deliver secure, reliable, and intelligent solutions perfectly tailored to your business goals.
-        </p>
-      </motion.div>
 
-      <div className="w-full max-w-7xl mx-auto divider my-24 opacity-50" />
-
-      {/* 3. Core Principles Grid */}
-      <div className="w-full max-w-7xl mx-auto">
-        <div className="flex flex-col mb-16 items-center text-center">
-          <p className="font-mono-tech text-primary mb-4 uppercase tracking-widest text-sm">Our Methodology</p>
-          <h3 className="font-display font-semibold text-foreground text-3xl md:text-5xl">The Core Principles</h3>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {principles.map((principle, i) => (
-            <motion.div
-              key={principle.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1, ease }}
-              className="flex flex-col p-8 md:p-10 rounded-[2rem] border border-border/5 bg-white/50 dark:bg-black/5 hover:bg-white dark:hover:bg-primary/5 shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-2 group"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mb-8 border border-primary/10 group-hover:scale-110 group-hover:-rotate-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 shadow-sm">
-                <principle.icon className="w-6 h-6" strokeWidth={1.5} />
-              </div>
-              <h4 className="font-display font-semibold text-xl md:text-2xl mb-4 group-hover:text-primary transition-colors duration-300">{principle.title}</h4>
-              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                {principle.description}
-              </p>
-            </motion.div>
-          ))}
+      {/* Core Principles Grid */}
+      <div className="mt-16">
+        <h3 className="font-display text-2xl font-semibold text-foreground mb-8 text-center">Our Core Principles</h3>
+        <div className="grid md:grid-cols-2 gap-6">
+          {principles.map((principle, i) => {
+            const Icon = principle.icon;
+            return (
+              <motion.div
+                key={principle.title}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1, ease }}
+                className="group p-6 rounded-xl border border-border/20 bg-white/30 dark:bg-black/10 hover:border-primary/40 hover:bg-white/50 dark:hover:bg-black/20 transition-all duration-300 backdrop-blur"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-foreground/5 group-hover:bg-foreground/10 transition-colors">
+                    <Icon className="w-6 h-6 text-foreground dark:text-white stroke-[1.5]" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold text-foreground text-base mb-2">{principle.title}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{principle.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
+
+      
+
+      
     </section>
   );
 };

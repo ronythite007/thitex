@@ -18,34 +18,34 @@ const services: Service[] = [
   {
     icon: Code2,
     number: "01",
-    title: "Software Engineering",
-    subtitle: "Enterprise-grade web and mobile applications.",
-    description: "We architect scalable, high-performance web platforms and mobile applications. Our engineering team focuses on writing clean, maintainable code using modern frameworks to ensure your product can handle millions of users seamlessly.",
-    features: ["Custom Software Development", "Cloud-Native Architecture", "API Integration & Dev", "Legacy System Modernization"]
+    title: "Website & App Development",
+    subtitle: "Enterprise-grade platforms engineered for scale and reliability.",
+    description: "We architect and build web and mobile applications designed to handle millions of transactions while maintaining exceptional performance. From cloud infrastructure planning to deployment, we engineer systems that scale predictably, maintain security across growth phases, and deliver seamless experiences across all devices. Every line of code is optimized for performance, reliability, and maintainability.",
+    features: ["Full-Stack Custom Development", "Cloud-Native Architecture (Kubernetes, AWS, GCP, Azure)", "RESTful & GraphQL API Design", "Progressive Web Applications", "Mobile-First Responsive Design", "Zero-Downtime Deployments"]
   },
   {
     icon: Brain,
     number: "02",
-    title: "AI & Machine Learning",
-    subtitle: "Turn your data into a competitive advantage.",
-    description: "Integrate cutting-edge artificial intelligence into your business operations. We build custom machine learning models, natural language processors, and predictive algorithms that automate workflows and generate unique insights.",
-    features: ["Predictive Analytics", "Large Language Models (LLMs)", "Workflow Automation", "Computer Vision Systems"]
-  },
-  {
-    icon: Palette,
-    number: "03",
-    title: "Product Design (UI/UX)",
-    subtitle: "Beautiful interfaces that drive conversions.",
-    description: "Great software requires great design. We conduct extensive user research to create intuitive, frictionless digital experiences. Our pixel-perfect interfaces are designed to delight users and maximize key business metrics.",
-    features: ["User Research & Strategy", "Wireframing & Prototyping", "Design System Creation", "Conversion Rate Optimization"]
+    title: "AI & Machine Learning Solutions",
+    subtitle: "Intelligent systems that learn, adapt, and drive measurable outcomes.",
+    description: "We design and deploy machine learning systems that solve real business problems—from predictive analytics and real-time anomaly detection to natural language processing and computer vision. Each model is built with production-grade monitoring, explainability, and continuous retraining pipelines to ensure long-term accuracy, transparency, and measurable business impact.",
+    features: ["Predictive Analytics & Forecasting", "Large Language Models & LLM Integrations", "Intelligent Workflow Automation", "Real-Time Anomaly Detection", "Computer Vision Systems", "Natural Language Processing & Chatbots"]
   },
   {
     icon: BarChart3,
+    number: "03",
+    title: "Custom Platform Architecture",
+    subtitle: "Bespoke solutions engineered from first principles for your unique needs.",
+    description: "Off-the-shelf solutions rarely provide competitive advantage. We design and build custom platforms tailored to your specific workflows, operational requirements, and growth trajectory. Whether you need a proprietary SaaS application, an internal operational hub, or a next-generation digital marketplace, we architect solutions that compound value over time.",
+    features: ["Custom Platform Design & Architecture", "Multi-Tenant System Implementation", "Enterprise Integration & API Layer", "White-Label & Modular Solutions", "Microservices & Scalable Backend", "Advanced Data Pipeline & Analytics"]
+  },
+  {
+    icon: Palette,
     number: "04",
-    title: "Growth & Marketing",
-    subtitle: "Scale your user base aggressively.",
-    description: "Building the product is only half the battle. We deploy data-driven digital marketing strategies, advanced technical SEO, and targeted ad campaigns to ensure your product reaches its exact target audience.",
-    features: ["Technical SEO", "Performance Marketing", "Data Analytics Setup", "Growth Hacking"]
+    title: "Strategic Design & User Experience",
+    subtitle: "Interfaces and experiences that delight users and drive adoption.",
+    description: "Product excellence requires design excellence. We conduct deep user research, develop data-informed design strategies, and craft intuitive interfaces that serve complex business requirements beautifully. Our design systems ensure consistency across platforms while reducing maintenance overhead and accelerating time-to-market.",
+    features: ["User Research & Discovery Workshops", "Wireframing, Prototyping & User Testing", "Design System & Component Libraries", "Accessibility & Compliance (WCAG 2.1, GDPR)", "Conversion Rate & Performance Optimization", "Brand Strategy & Visual Identity"]
   },
 ];
 
@@ -61,13 +61,13 @@ const ServicesDetailed = () => {
       >
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/10 bg-primary/5 mb-6">
            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-           <span className="font-mono-tech text-primary text-xs font-semibold tracking-widest">OUR EXPERTISE</span>
+           <span className="font-mono-tech text-primary text-xs font-semibold tracking-widest">WHAT WE DELIVER</span>
         </div>
-        <h1 className="font-display font-bold text-gradient text-4xl md:text-6xl mb-6 leading-tight">
-          Comprehensive digital solutions
-        </h1>
-        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
-          From concept to deployment, we provide the full spectrum of technical services required to launch and scale industry-leading products.
+        <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight text-foreground">
+          Four integrated pillars of excellence
+        </h2>
+        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+          We combine technical depth, strategic thinking, and operational discipline to deliver transformative digital solutions. Every service is designed to work seamlessly with the others, ensuring cohesive, scalable outcomes.
         </p>
       </motion.div>
 
@@ -80,23 +80,24 @@ const ServicesDetailed = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.7, delay: i * 0.1, ease }}
-            className="glass-panel glass-panel-hover rounded-[2.5rem] p-8 lg:p-12 group relative overflow-hidden flex flex-col h-full shadow-sm hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500"
+            className="glass-panel glass-panel-hover rounded-[2.5rem] p-8 lg:p-12 group relative overflow-hidden flex flex-col h-full shadow-sm hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 border border-border/30 hover:border-primary/30"
           >
-            {/* Background Glow */}
-            <div className="absolute -right-20 -top-20 w-80 h-80 bg-primary/5 rounded-full blur-[80px] group-hover:bg-primary/10 group-hover:scale-125 transition-all duration-700 pointer-events-none" />
+            {/* Background Glow - Enhanced */}
+            <div className="absolute -right-20 -top-20 w-80 h-80 bg-primary/5 rounded-full blur-[100px] group-hover:bg-primary/15 group-hover:scale-125 transition-all duration-700 pointer-events-none" />
+            <div className="absolute -left-20 -bottom-20 w-60 h-60 bg-primary/3 rounded-full blur-[80px] group-hover:bg-primary/10 group-hover:scale-110 transition-all duration-700 pointer-events-none opacity-50" />
             
             <div className="flex justify-between items-start mb-8 relative z-10">
-              <div className="w-16 h-16 rounded-2xl bg-white dark:bg-black/20 border border-border/5 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 shadow-sm transition-all duration-500">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 flex items-center justify-center group-hover:from-primary group-hover:to-primary/90 group-hover:text-primary-foreground group-hover:scale-110 shadow-sm transition-all duration-500">
                 <service.icon className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors duration-500" strokeWidth={1.5} />
               </div>
-              <span className="font-mono-tech text-primary/20 text-4xl font-light">{service.number}</span>
+              <span className="font-mono-tech text-primary/30 text-4xl font-light group-hover:text-primary/50 transition-colors duration-500">{service.number}</span>
             </div>
             
             <div className="relative z-10 flex-1 flex flex-col">
-              <h3 className="font-display font-bold text-foreground text-3xl mb-2 group-hover:text-primary transition-colors duration-500">
+              <h3 className="font-display font-bold text-foreground text-2xl md:text-3xl mb-2 group-hover:text-primary transition-colors duration-500">
                 {service.title}
               </h3>
-              <p className="font-mono-tech text-primary text-xs tracking-wider mb-6">
+              <p className="font-mono-tech text-primary/70 text-xs tracking-wider mb-6 font-medium">
                 {service.subtitle}
               </p>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg mb-8 flex-1">
@@ -104,19 +105,19 @@ const ServicesDetailed = () => {
               </p>
 
               <div>
-                <p className="font-mono-tech text-muted-foreground text-xs mb-4">KEY FEATURES</p>
+                <p className="font-mono-tech text-muted-foreground text-xs mb-4 font-semibold tracking-wider">KEY FEATURES</p>
                 <ul className="space-y-3">
                   {service.features.map(feature => (
-                    <li key={feature} className="flex items-center gap-3 text-sm text-foreground/80">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary/40" />
+                    <li key={feature} className="flex items-center gap-3 text-sm text-foreground/80 group-hover:text-foreground transition-colors">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary/60 group-hover:bg-primary transition-colors flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="mt-10 pt-6 border-t border-border/5">
-                <Link to="/contact" className="inline-flex items-center gap-2 font-mono-tech text-sm text-primary hover:text-primary/70 transition-colors group/link w-max">
+              <div className="mt-10 pt-6 border-t border-border/10 group-hover:border-border/30 transition-colors">
+                <Link to="/contact" className="inline-flex items-center gap-2 font-mono-tech text-sm text-primary hover:text-primary/70 transition-colors group/link w-max font-medium">
                   Discuss this service <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>

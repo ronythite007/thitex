@@ -14,40 +14,39 @@ const Index = () => {
       <Navbar />
       
       <main className="flex flex-col w-full">
-        {/* 1. Hero Area */}
+        {/* Hero Area */}
         <div className="relative w-full bg-background z-10">
           <HeroSection />
         </div>
 
-        {/* 2. Quick Stats Area */}
-        <div className="w-full relative border-y border-border/5 bg-background z-20">
+        {/* Quick Stats Area */}
+        <div className="w-full relative bg-[#F8F9FA] dark:bg-black/20 z-20">
           <QuickStats />
         </div>
 
-        {/* 3. About Preview Area */}
-        <div className="w-full relative bg-background overflow-hidden z-10" id="about">
+        {/* About Preview Area */}
+        <div className="w-full relative bg-background z-10">
           <AboutPreview />
         </div>
 
-        {/* 4. Services Preview Area */}
-        <div className="w-full relative bg-[#F8F9FA] dark:bg-primary/[0.01] border-y border-border/5 z-10" id="services">
+        {/* Services Preview Area */}
+        <div className="w-full relative bg-[#F8F9FA] dark:bg-black/20 z-10">
           <ServicesGrid />
         </div>
 
-        {/* 5. Featured Work (Portfolio) */}
-        <div className="w-full relative bg-background overflow-hidden z-10" id="work">
+        {/* Featured Work */}
+        <div className="w-full relative bg-background z-10">
           <div className="absolute top-0 right-0 w-[80vw] h-[40vw] bg-primary/[0.02] rounded-full blur-[100px] pointer-events-none" />
           <FeaturedWork />
         </div>
 
-        {/* 6. Testimonials */}
-        <div className="w-full relative bg-[#F8F9FA] dark:bg-primary/[0.02] border-y border-border/5 z-10">
+        {/* Testimonials */}
+        <div className="w-full relative bg-[#F8F9FA] dark:bg-black/20 z-10">
           <Testimonials />
         </div>
 
-        {/* 7. Contact CTA Area */}
-        <div className="w-full relative bg-background overflow-hidden z-10" id="contact">
-          {/* Subtle ambient glow bottom left */}
+        {/* Contact CTA Area */}
+        <div className="w-full relative bg-background z-10">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute -left-[10%] -bottom-[10%] w-[50vw] h-[50vw] rounded-full bg-primary/[0.02] blur-[120px]" />
           </div>
@@ -56,7 +55,7 @@ const Index = () => {
       </main>
 
       {/* Footer Area */}
-      <div className="w-full bg-[#F8F9FA] dark:bg-primary/[0.02] border-t border-border/10">
+      <div className="w-full bg-[#F8F9FA] dark:bg-black/20">
         <Footer />
       </div>
     </div>

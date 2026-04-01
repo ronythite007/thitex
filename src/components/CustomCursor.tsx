@@ -48,21 +48,6 @@ const CustomCursor = () => {
           mass: 0.5,
         }}
       />
-      {/* Cursor trail */}
-      <motion.div
-        className="fixed top-0 left-0 w-8 h-8 border border-primary/30 rounded-full pointer-events-none z-40"
-        animate={{
-          x: mousePosition.x - 16,
-          y: mousePosition.y - 16,
-          scale: isHovering ? 2 : 1,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 300,
-          damping: 25,
-          mass: 0.8,
-        }}
-      />
     </>
   );
 };

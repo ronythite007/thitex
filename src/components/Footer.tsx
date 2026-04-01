@@ -11,20 +11,23 @@ const Footer = () => {
         <div className="divider opacity-30" />
 
         {/* Newsletter Section */}
-        <div className="py-20">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-mono-tech mb-6">
-              <Mail className="w-4 h-4" />
-              Stay Updated
-            </div>
-            <h3 className="text-2xl md:text-3xl font-display font-semibold text-foreground mb-4">
-              Get the latest insights
-            </h3>
-            <p className="text-muted-foreground leading-relaxed mb-8 max-w-lg mx-auto">
-              Join our newsletter for exclusive insights on technology, AI innovation, and digital transformation strategies.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
-              <div className="flex-1 relative">
+        <div className="pt-16 pb-12">
+          <div className="max-w-2xl mx-auto">
+            <div className="rounded-3xl border border-border/30 bg-background/70 backdrop-blur-sm p-6 md:p-10 shadow-sm">
+              <div className="text-center">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-mono-tech mb-6">
+                  <Mail className="w-4 h-4" />
+                  Stay Updated
+                </div>
+                <h3 className="text-2xl md:text-3xl font-display font-semibold text-foreground mb-4">
+                  Get the latest insights
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-8 max-w-lg mx-auto">
+                  Join our newsletter for exclusive insights on technology, AI innovation, and digital transformation strategies.
+                </p>
+              </div>
+              <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
+                <div className="flex-1 relative">
                 <input
                   type="email"
                   placeholder="Enter your email address"
@@ -44,6 +47,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
+      </div>
 
         <div className="divider opacity-30" />
 

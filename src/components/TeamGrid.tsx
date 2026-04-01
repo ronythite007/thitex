@@ -36,9 +36,9 @@ const TeamGrid = () => {
            viewport={{ once: true }}
            transition={{ duration: 0.8, ease }}
         >
-          <p className="font-mono-tech text-primary mb-4">Leadership</p>
+          <p className="font-mono-tech text-primary mb-4">About</p>
           <h2 className="font-display font-semibold text-foreground text-4xl md:text-5xl">
-            Meet the elite
+            Our team & expertise
           </h2>
         </motion.div>
         <motion.p
@@ -48,7 +48,7 @@ const TeamGrid = () => {
            transition={{ duration: 0.8, delay: 0.1, ease }}
            className="text-muted-foreground text-lg max-w-md"
         >
-          We only deploy the absolute top 1% of technical talent. No junior developers. No compromises.
+          We are a collective of experienced technologists delivering reliable, scalable solutions to help your business thrive.
         </motion.p>
       </div>
 

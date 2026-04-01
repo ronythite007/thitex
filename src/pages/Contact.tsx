@@ -12,7 +12,7 @@ const Contact = () => {
       <main className="flex-1 w-full relative z-10">
         <ContactSection />
       </main>
-      <div className="w-full bg-[#F8F9FA] dark:bg-primary/[0.02] border-t border-border/10 z-10">
+      <div className="w-full bg-[#F8F9FA] dark:bg-black/20 z-10">
         <Footer />
       </div>
     </div>
